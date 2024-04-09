@@ -1,0 +1,114 @@
+#host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 75px 20px;
+  border-bottom-right-radius: 100px;
+  height: 700px;
+  background: url(/host2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#host .container {
+  background: #ffffff;
+  width: 500px;
+  height: fit-content;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+#host .container button {
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #5b656f;
+  color: #ffffff;
+  width: 82%;
+  padding: 7px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+#host .container p {
+  margin-top: 0px;
+  font-size: 16.5px;
+}
+
+.form-box {
+  margin-top: -10px;
+  margin-bottom: -24px;
+  width: 100%;
+  height: 300px;
+  height: fit-content;
+}
+
+.form-box div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.form-box input {
+  width: 41%;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+.form-box input::placeholder {
+  font-size: 12px;
+}
+
+.hostpopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 330px;
+  height: fit-content;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background-color: rgb(224, 224, 213);
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.hostpopup p {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.hostpopup button {
+  display: inline-block;
+  width: 220px;
+  height: 40px;
+  margin-top: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-decoration: none;
+  background: #26333f;
+  text-align: center;
+  font-size: 17px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 495px) {
+  #host {
+    padding: 50px 20px;
+  }
+  #host .container {
+    width: 100%;
+  }
+}

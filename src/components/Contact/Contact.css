@@ -1,0 +1,64 @@
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 20px 30px 20px;
+  min-height: 80vh;
+  flex-direction: column;
+  gap: 15px;
+  background: linear-gradient(176deg, #6868688c, transparent);
+}
+#contact .container {
+  display: flex;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 50px;
+  max-width: 1500px;
+  min-width: 1500px;
+  background: #fff;
+  margin-top: 60px;
+}
+#contact .container img {
+  height: auto;
+  flex: 4;
+}
+#contact .container .content {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  flex: 3;
+  padding: 30px;
+  justify-content: center;
+}
+#contact .container .content h3 {
+  text-align: start;
+}
+#contact .container .content div {
+  display: flex;
+  align-items: center;
+}
+#contact .container .content div p {
+  width: 120px;
+}
+#contact .container .content ul {
+  display: flex;
+  gap: 15px;
+  color: #181d24;
+}
+#contact .container .content ul a {
+  text-decoration: none;
+  color: #181d24;
+}
+#contact .container .content ul a svg {
+  font-size: 25px;
+}
+@media (max-width: 1520px) {
+  #contact .container {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 912px) {
+  #contact .container {
+    flex-direction: column;
+  }
+}

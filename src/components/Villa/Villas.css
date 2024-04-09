@@ -1,0 +1,28 @@
+#allVillas {
+  min-height: 100vh;
+  background: linear-gradient(176deg, #6868688c, transparent);
+  padding: 150px 20px;
+}
+#allVillas h1 {
+  color: #fff;
+}
+#allVillas p {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#allVillas .villasContainer {
+  margin: 0 auto;
+  max-width: 1500px;
+}
+
+.note {
+  margin-top: 30px;
+  margin-bottom: -40px;
+  color: black;
+  font-size: 16px;
+}
+.note span {
+  font-size: 20px;
+  font-weight: 600;
+}

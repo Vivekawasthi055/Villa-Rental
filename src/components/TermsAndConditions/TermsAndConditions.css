@@ -1,0 +1,47 @@
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+article header {
+  text-align: center;
+}
+article section {
+  padding: 0 100px;
+}
+article section p {
+  margin: 12px 0;
+}
+
+#termsandcond {
+  padding: 150px 20px 30px 20px;
+  min-width: 1500px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+#termsandcond header {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#termsandcond P {
+  margin-bottom: 20px;
+}
+#termsandcond h5 {
+  text-align: start;
+  margin-bottom: 10px;
+}
+#termsandcond .content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 1520px) {
+  #termsandcond {
+    min-width: 100%;
+    width: 100%;
+  }
+}
