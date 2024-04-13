@@ -28,7 +28,7 @@ const Host = () => {
 
     if (fullname && address && phone && email) {
       const res = await fetch(
-        "https://villa-bookings-data-default-rtdb.firebaseio.com/Villa-Hosting-Records.json",
+        "https://luxury-villa-rentals-default-rtdb.firebaseio.com/Villa-Hosting-Records.json",
         {
           method: "POST",
           headers: {

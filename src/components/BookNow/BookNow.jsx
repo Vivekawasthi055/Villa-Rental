@@ -13,8 +13,8 @@ const BookNow = () => {
     category: "",
     location: "",
     location2: "", // New state for location2
-    arrival: "",
-    departure: "",
+    checkInDate: "",
+    checkOutDate: "",
   });
 
   const [showLocation2, setShowLocation2] = useState(false);
@@ -39,8 +39,8 @@ const BookNow = () => {
       category,
       location,
       location2, // Include location2 in submission
-      arrival,
-      departure,
+      checkInDate,
+      checkOutDate,
     } = userData;
 
     if (
@@ -49,12 +49,25 @@ const BookNow = () => {
       phone &&
       email &&
       category &&
-      arrival &&
-      departure &&
+      checkInDate &&
+      checkOutDate &&
       ((category === "Sea Side" && location2) || location) // Check if location or location2 is selected based on category
     ) {
+      let selectedLocation = category === "Sea Side" ? location2 : location;
+
+      Email.send({
+        SecureToken: "ba9fb359-3f5a-45fe-946f-2ab92da58c87",
+        To: userData.email,
+        From: "luxuryvillarentals3@gmail.com",
+        Subject: "Booking Confirmation",
+        Body: `Hello ${fullName},<br>Your booking has been confirmed! We will contact you soon!<br><br>Your booking details filled by you are -<br>Full Name: ${fullName}<br>Address: ${address}<br>Contact Number: ${phone}<br>E-mail: ${email}<br>Villa Category: ${category}<br>Villa Name & Location: ${selectedLocation}<br>Check-in Date: ${checkInDate}<br>Check-out Date: ${checkOutDate}<br><br>Thank you for choosing us.`,
+      }).then(
+        (message) => alert("Email sent successfully"),
+        (error) => console.error("Error:", error)
+      );
+
       const res = await fetch(
-        "https://villa-bookings-data-default-rtdb.firebaseio.com/Villa-Booking-Records.json",
+        "https://luxury-villa-rentals-default-rtdb.firebaseio.com/Villa-Booking-Records.json",
         {
           method: "POST",
           headers: {
@@ -66,9 +79,9 @@ const BookNow = () => {
             phone,
             email,
             category,
-            location: category === "Sea Side" ? location2 : location, // Use location2 if category is Sea Side and always show under location in firebas because we use main name location: in this field
-            arrival,
-            departure,
+            location: selectedLocation,
+            checkInDate,
+            checkOutDate,
           }),
         }
       );
@@ -222,27 +235,27 @@ const BookNow = () => {
 
               <div className="input-container">
                 <label htmlFor="arrival" className="label">
-                  Arrival Date
+                  Check-in Date
                 </label>
                 <input
                   type="date"
-                  name="arrival"
-                  id="arrival"
+                  name="checkInDate"
+                  id="checkInDate"
                   required
-                  value={userData.arrival}
+                  value={userData.checkInDate}
                   onChange={postUserData}
                 />
               </div>
               <div className="input-container">
                 <label htmlFor="departure" className="label">
-                  Departure Date
+                  Check-out Date
                 </label>
                 <input
                   type="date"
-                  name="departure"
-                  id="departure"
+                  name="checkOutDate"
+                  id="checkOutDate"
                   required
-                  value={userData.departure}
+                  value={userData.checkOutDate}
                   onChange={postUserData}
                 />
               </div>
