@@ -10,6 +10,7 @@ const BookNow = () => {
     address: "",
     phone: "",
     email: "",
+    gender: "",
     category: "",
     location: "",
     location2: "", // New state for location2
@@ -36,6 +37,7 @@ const BookNow = () => {
       address,
       phone,
       email,
+      gender,
       category,
       location,
       location2, // Include location2 in submission
@@ -48,6 +50,7 @@ const BookNow = () => {
       address &&
       phone &&
       email &&
+      gender &&
       category &&
       checkInDate &&
       checkOutDate &&
@@ -60,7 +63,7 @@ const BookNow = () => {
         To: userData.email,
         From: "luxuryvillarentals3@gmail.com",
         Subject: "Booking Confirmation",
-        Body: `Hello ${fullName},<br>Your booking has been confirmed! We will contact you soon!<br><br>Your booking details filled by you are -<br>Full Name: ${fullName}<br>Address: ${address}<br>Contact Number: ${phone}<br>E-mail: ${email}<br>Villa Category: ${category}<br>Villa Name & Location: ${selectedLocation}<br>Check-in Date: ${checkInDate}<br>Check-out Date: ${checkOutDate}<br><br>Thank you for choosing us.`,
+        Body: `Hello ${fullName},<br>Your booking has been confirmed! We will contact you soon!<br><br>Your booking details filled by you are -<br>Full Name: ${fullName}<br>Address: ${address}<br>Contact Number: ${phone}<br>E-mail: ${email}<br>Gender: ${gender}<br>Villa Category: ${category}<br>Villa Name & Location: ${selectedLocation}<br>Check-in Date: ${checkInDate}<br>Check-out Date: ${checkOutDate}<br><br>Thank you for choosing us.`,
       }).then(
         (message) => alert("Email sent successfully"),
         (error) => console.error("Error:", error)
@@ -78,6 +81,7 @@ const BookNow = () => {
             address,
             phone,
             email,
+            gender,
             category,
             location: selectedLocation,
             checkInDate,
@@ -170,6 +174,25 @@ const BookNow = () => {
                   onChange={postUserData}
                 />
               </div>
+
+              <div className="input-container">
+                <label htmlFor="gender" className="label">
+                  Select Gender
+                </label>
+                <select
+                  name="gender"
+                  id="gender"
+                  value={userData.gender}
+                  onChange={postUserData}
+                >
+                  <option value="" disabled>
+                    Select Option
+                  </option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+
               <div className="input-container">
                 <label htmlFor="category" className="label">
                   Select Location Category
@@ -203,10 +226,10 @@ const BookNow = () => {
                     <option value="" disabled>
                       Select Option
                     </option>
-                    <option>Aprodite / Greece</option>
-                    <option>Seadeno / Greece</option>
-                    <option>White Lady / Italy</option>
-                    <option>Thebes / Italy</option>
+                    <option>SeaBreeze Villa / Goa</option>
+                    <option>PearlSeas Villa / Goa</option>
+                    <option>Paradise Villa / Goa</option>
+                    <option>WishOcean Villa / Lakshadweep</option>
                   </select>
                 </div>
               ) : (
@@ -224,11 +247,11 @@ const BookNow = () => {
                     <option value="" disabled>
                       Select Option
                     </option>
-                    <option>Villa Luna / Greece</option>
-                    <option>Villa Boxane / Greece</option>
-                    <option>Villa Tosco / Italy</option>
-                    <option>Villa Makaska / Italy</option>
-                    <option>Villa Sunset / Italy</option>
+                    <option>Sunshine Villa / Manali</option>
+                    <option>Mount Villa / Manali</option>
+                    <option>Everpeak Villa / Manali</option>
+                    <option>Valleytop Villa / Ladakh</option>
+                    <option>Skyridge Villa / Ladakh</option>
                   </select>
                 </div>
               )}

@@ -16,7 +16,8 @@ const Footer = () => {
         <div className="container">
           <h4>LUXURY VILLA RENTALS</h4>
           <p>
-          Discover luxury redefined with Luxury Villa Rentals. Your gateway to unforgettable experiences awaits.
+            Discover luxury redefined with Luxury Villa Rentals. Your gateway to
+            unforgettable experiences awaits.
           </p>
           <ul>
             <li>
@@ -33,7 +34,7 @@ const Footer = () => {
         <div className="container">
           <h4>Connect with us</h4>
           <p>+91 6666 66 6666</p>
-          <p>luxuryvillarentals@gmail.com</p>
+          <p>luxuryvillarentals3@gmail.com</p>
           <p>© All Rights Reserved By Luxury Villa Rentals.</p>
         </div>
       </footer>

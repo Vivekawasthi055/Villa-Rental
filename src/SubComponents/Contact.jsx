@@ -68,7 +68,7 @@ const SubContact = () => {
             </div>
             <div>
               <p>Email</p>
-              <span>luxuryvillarentals@gmail.com</span>
+              <span>luxuryvillarentals3@gmail.com</span>
             </div>
             <div>
               <p>Address</p>

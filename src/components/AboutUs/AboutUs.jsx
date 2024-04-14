@@ -11,11 +11,13 @@ const AboutUs = () => {
           <p>
             Luxury Villa Rentals invites you to indulge in the epitome of
             sophistication and comfort. With an exclusive collection of
-            handpicked villas nestled in breathtaking locales,
+            handpicked villas nestled in breathtaking locales, we curate
+            unforgettable experiences tailored to your discerning tastes.
           </p>
           <p>
-            we curate unforgettable experiences tailored to your discerning
-            tastes.
+            As an Indian company, we take pride in showcasing the rich diversity
+            and beauty of our homeland, ensuring that each villa reflects the
+            vibrant culture and hospitality that India is renowned for.
           </p>
           <p>
             Our commitment to excellence extends beyond luxurious
