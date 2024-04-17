@@ -29,6 +29,16 @@
   color: #c8c8c8;
   position: relative;
 }
+
+.nav ul .log-in-out-btn {
+  background-color: rgb(6, 42, 201);
+  color: rgb(230, 224, 224);
+  cursor: pointer;
+  width: 100px;
+  height: 32px;
+  border: none;
+}
+
 .nav ul a::before {
   content: "";
   position: absolute;
@@ -43,6 +53,7 @@
   left: 0;
   transition: 0.3s;
 }
+
 @media (max-width: 900px) {
   .nav {
     padding: 17px 35px;

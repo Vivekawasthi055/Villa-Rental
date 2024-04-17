@@ -7,8 +7,20 @@ import {
   RiInstagramLine,
   RiTwitterXLine,
 } from "react-icons/ri";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const SubContact = () => {
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
+
+  const handleNavLinkClick = (path) => {
+    if (!isAuthenticated) {
+      // If user is not authenticated, redirect to login page or show login modal
+      loginWithRedirect();
+    } else {
+      navigate(path);
+    }
+  };
+
   const [submitted, setSubmitted] = useState(false);
   const [feedbackData, setFeedbackData] = useState({
     fullName: "",
@@ -87,7 +99,7 @@ const SubContact = () => {
             </ul>
           </div>
 
-          <div className="container_2">
+          <div className="container_2" onClick={() => handleNavLinkClick("/")}>
             <h3>We'd love to hear from you</h3>
             <form method="POST">
               <div>

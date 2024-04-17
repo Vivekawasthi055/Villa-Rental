@@ -1,8 +1,20 @@
 import React, { useState } from "react";
 import "./styles/Host.css";
 import { MdErrorOutline } from "react-icons/md";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Host = () => {
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
+
+  const handleNavLinkClick = (path) => {
+    if (!isAuthenticated) {
+      // If user is not authenticated, redirect to login page or show login modal
+      loginWithRedirect();
+    } else {
+      navigate(path);
+    }
+  };
+
   const [submitted, setSubmitted] = useState(false);
   const [hostData, setHostData] = useState({
     fullname: "",
@@ -55,7 +67,7 @@ const Host = () => {
   return (
     <>
       <section id="host">
-        <div className="container">
+        <div className="container" onClick={() => handleNavLinkClick("/")}>
           <p>BECOME A HOST</p>
           <h3>Become a host</h3>
           <p>
