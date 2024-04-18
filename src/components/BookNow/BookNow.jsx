@@ -65,7 +65,7 @@ const BookNow = () => {
         Subject: "Booking Confirmation",
         Body: `Hello ${fullName},<br>Your booking has been confirmed! We will contact you soon!<br><br>Your booking details filled by you are -<br>Full Name: ${fullName}<br>Address: ${address}<br>Contact Number: ${phone}<br>E-mail: ${email}<br>Gender: ${gender}<br>Villa Category: ${category}<br>Villa Name & Location: ${selectedLocation}<br>Check-in Date: ${checkInDate}<br>Check-out Date: ${checkOutDate}<br><br>Thank you for choosing us.`,
       }).then(
-        (message) => alert("Email sent successfully"),
+        (message) => alert("Booking details have been sent to your email."),
         (error) => console.error("Error:", error)
       );
 
