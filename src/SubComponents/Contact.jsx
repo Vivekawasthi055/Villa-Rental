@@ -45,7 +45,7 @@ const SubContact = () => {
 
     if (fullName && message && email) {
       const res = await fetch(
-        "https://luxury-villa-rentals-default-rtdb.firebaseio.com/Feedback-Contact-Records.json",
+        "https://luxury-villa-rentals-7722e-default-rtdb.firebaseio.com/Feedback-Contact-Records.json",
         {
           method: "POST",
           headers: {

@@ -63,14 +63,14 @@ const BookNow = () => {
         To: userData.email,
         From: "luxuryvillarentals3@gmail.com",
         Subject: "Booking Confirmation",
-        Body: `Hello ${fullName},<br>Your booking has been confirmed! We will contact you soon!<br><br>Your booking details filled by you are -<br>Full Name: ${fullName}<br>Address: ${address}<br>Contact Number: ${phone}<br>E-mail: ${email}<br>Gender: ${gender}<br>Villa Category: ${category}<br>Villa Name & Location: ${selectedLocation}<br>Check-in Date: ${checkInDate}<br>Check-out Date: ${checkOutDate}<br><br>Thank you for choosing us.`,
+        Body: `<b>Dear ${fullName}</b>,<br>Your booking has been confirmed! We will contact you soon!<br><br><b>Your booking details entered by you are as follows :</b><br>Full Name: ${fullName}<br>Address: ${address}<br>Contact Number: ${phone}<br>E-mail: ${email}<br>Gender: ${gender}<br>Villa Category: ${category}<br>Villa Name & Location: ${selectedLocation}<br>Check-in Date: ${checkInDate}<br>Check-out Date: ${checkOutDate}<br><br><b>Thank you for choosing us.<br><br>Regards,<br>Team Luxury Villa Rentals</b>`,
       }).then(
         (message) => alert("Booking details have been sent to your email."),
         (error) => console.error("Error:", error)
       );
 
       const res = await fetch(
-        "https://luxury-villa-rentals-default-rtdb.firebaseio.com/Villa-Booking-Records.json",
+        "https://luxury-villa-rentals-7722e-default-rtdb.firebaseio.com/Villa-Booking-Records.json",
         {
           method: "POST",
           headers: {
