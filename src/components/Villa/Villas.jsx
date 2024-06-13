@@ -66,7 +66,8 @@ const Villas = () => {
           paperwork, and all the villas are owned by the LUXURY VILLA RENTALS
           Company until the lease period ends. If you would like to rent any of
           the villas listed on our website, please contact us or book through
-          our website. thank you.
+          our website. thank you. <br />
+          Team Luxury Villa Rentals
         </span>
       </div>
     </>
