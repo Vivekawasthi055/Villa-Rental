@@ -7,20 +7,8 @@ import { FaBed } from "react-icons/fa";
 import { BiArea } from "react-icons/bi";
 import { FaBath } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
 
 const TopVillas = () => {
-  const { loginWithRedirect, isAuthenticated } = useAuth0();
-
-  const handleNavLinkClick = (path) => {
-    if (!isAuthenticated) {
-      // If user is not authenticated, redirect to login page or show login modal
-      loginWithRedirect();
-    } else {
-      navigate(path);
-    }
-  };
-
   return (
     <section id="topVillas">
       <h1>TOP PICK VILLAS</h1>
@@ -33,12 +21,7 @@ const TopVillas = () => {
       <div className="villasContainer">
         {villas.slice(0, 3).map((element) => {
           return (
-            <Link
-              to={`/villa/${element.id}`}
-              onClick={() => handleNavLinkClick(`/villa/${element.id}`)}
-              className="card"
-              key={element.id}
-            >
+            <Link to={`/villa/${element.id}`} className="card" key={element.id}>
               <img src={element.image} alt={element.name} />
               <div className="location_text">
                 <span>{element.location}</span>
